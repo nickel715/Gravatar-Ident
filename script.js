@@ -5,7 +5,7 @@ function replaceAvatars() {
 
         var src = images[i].getAttribute('src');
 
-        if (src.indexOf('gravatar.com') !== -1) {
+        if (src && src.indexOf('gravatar.com') !== -1) {
 
             var newUrl = src.replace('d=mm', 'd=identicon');
             images[i].setAttribute('src', newUrl);
